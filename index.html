@@ -104,6 +104,21 @@
             <input type="submit" value="Send Message"  class="btn">
         </form>
      </section>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("IVdcbIrBfShbFsjSn");
+  })();
+
+  function sendEmail() {
+    emailjs.sendForm('service zrzl4xi', 'service_zrzl4xi', '#contact-form')
+      .then(function() {
+        alert("Message sent successfully!");
+      }, function(error) {
+        alert("Failed to send: " + error);
+      });
+  }
+</script>
      <!--FOOTER DESIGN-->
 
      <footer class="footer">
