@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    emailjs.sendForm("service_zrzl4xi", "template_p4mst2v", form)
+    <form id="contact-form" ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
       .then(() => {
         alert("Message sent successfully!");
       }, (error) => {
