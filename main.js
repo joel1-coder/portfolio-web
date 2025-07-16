@@ -1,15 +1,19 @@
-// Initialize EmailJS (replace with your actual Public Key)
 emailjs.init("IVdcbIrBfShbFsjSn");
 
-// Navbar toggle and scroll code
-let menuIcon = document.querySelector('.menu-icon');
-let navbar = document.querySelector('.navbar');
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
 
-menuIcon.onclick = () => {
-  menuIcon.classList.toggle('fa-xmark');
-  navbar.classList.toggle('active');
-};
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
+    emailjs.sendForm("service zrzl4xi", "template_p4mst2v", form)
+      .then(() => {
+        alert("Message sent successfully!");
+      }, (error) => {
+        alert("Failed to send message: " + error.text);
+      });
+  });
+});
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('.navbar a');
 
