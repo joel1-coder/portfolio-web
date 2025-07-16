@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    emailjs.sendForm("service zrzl4xi", "template_p4mst2v", form)
+    emailjs.sendForm("service_zrzl4xi", "template_p4mst2v", form)
       .then(() => {
         alert("Message sent successfully!");
       }, (error) => {
