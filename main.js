@@ -1,19 +1,4 @@
-emailjs.init("IVdcbIrBfShbFsjSn");
 
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contact-form");
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    <form id="contact-form" ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
-      .then(() => {
-        alert("Message sent successfully!");
-      }, (error) => {
-        alert("Failed to send message: " + error.text);
-      });
-  });
-});
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('.navbar a');
 
