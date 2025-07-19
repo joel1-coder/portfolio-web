@@ -21,7 +21,7 @@
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
-            <a href="#service">Service</a>
+            <a href="#services">Services</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -62,46 +62,39 @@
         </div>
     </section>
     <!--SERVICE SECTION DESIGN-->
-    <section class="service" id="service">
-        <h2 class="heading">My<span>Service</span></h2>
-        <div class="service-container">
-            <div class="service-box">
-                <i class="fa-solid fa-code"></i>
+    <section class="services" id="services">
+        <h2 class="heading">My<span> Services</span></h2>
+        <div class="services-container">
+            <div class="service-card">
+                <i class="fa-solid fa-code icon"></i>
                 <h3>Web Development</h3>
-                <p>Building visually appealing, interactive, and fully responsive websites tailored to client needs using modern technologies like HTML, CSS, and JavaScript</p>
+                <p>Building responsive and dynamic websites using modern tech like HTML, CSS, JS.</p>
                 <a href="#" class="btn">Read More</a>
             </div>
-
-            <div class="service-box">
-                <i class="fa-solid fa-palette"></i>
-                <h3>UI/UX Designing</h3>
-                <p>Designing intuitive user interfaces and optimizing user experiences to ensure seamless navigation and engagement across all devices</p>
+            <div class="service-card">
+                <i class="fa-solid fa-palette icon"></i>
+                <h3>UI/UX Design</h3>
+                <p>Creating user-centered designs with a focus on accessibility and usability.</p>
                 <a href="#" class="btn">Read More</a>
             </div>
-
-
-    </section>
-
-
-         <!-- Add more portfolio boxes as needed -->
+            <!-- Add more service cards as needed -->
         </div>
     </section>
+
      <!--CONTACT SECTION DESIGN-->
      <section class="contact" id="contact">
         <h2 class="heading">Contact<span>Me</span></h2>
-
-        <form id="contact form" action="#">
+        <form id="contact-form" action="#" onsubmit="sendEmail(); return false;">
             <div class="input-box">
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="Email Address">
+                <input type="text" name="from_name" placeholder="Full Name" required>
+                <input type="email" name="from_email" placeholder="Email Address" required>
             </div>
-
             <div class="input-box">
-            <input type="number" placeholder="Mobile Number">
-            <input type="text" placeholder="Email Subject">
+                <input type="number" name="mobile" placeholder="Mobile Number">
+                <input type="text" name="subject" placeholder="Email Subject">
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message"  class="btn">
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
         </form>
      </section>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
