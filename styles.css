@@ -170,33 +170,71 @@ span{
     margin: 2rem 0 3rem;
 
 }
-.services h2{
-    margin-bottom: 2rem;
+.services {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #0b0c1a;
+  color: #fff;
 }
-.services-container .services-box{
-    flex:1 1 30rem;
-    background: var(--snd-bg-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 4rem;
-    text-align: center;
-    border: 0.2rem solid var(--bg-color);
-    transition:0.5s ease;
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
 }
-.services-container.services-box:hover{
-    border-color: var(--main-color) ;
-    transform: scale(1.05);
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
-.services-box i{
-    font-size: 7rem;
-    color: var(--main-color);
+
+.service-card {
+  background-color: #1a1c2c;
+  border-radius: 12px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
+  transition: transform 0.3s ease;
+  text-align: center;
 }
-.services-box h2{
-    font-size: 3rem;
+
+.service-card:hover {
+  transform: translateY(-10px);
 }
-.services-box p{
-    font-size: 5rem;
-    margin: 1rem 0 3rem;
-} 
+
+.service-card .icon {
+  font-size: 2.5rem;
+  color: #00bfff;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 1.4rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.service-card a.btn {
+  background-color: #00bfff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.service-card a.btn:hover {
+  background: #009acd;
+}
+
 
 .portfolio-container{
     display: grid;
@@ -459,127 +497,6 @@ span {
     font-size: 1.4rem;
     font-weight: 400;
 }
-.service-box {
-  width: 300px;
-  background: #1e1e2f;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  text-align: center;
-  transition: transform 0.3s;
-}
-.service-box:hover {
-  transform: scale(1.05);
-}
-.service-box i {
-  font-size: 2rem;
-  color: #00bfff;
-  margin-bottom: 1rem;
-}
-
-.service-box h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #00bfff;
-  color: #fff;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 1rem;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #009acd;
-}
-.service-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
-  gap: 2rem; /* Space between cards */
-  margin-top: 2rem;
-}
-.service-box {
-  width: 300px;
-  background: #1e1e2f;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  text-align: center;
-  color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.service-box:hover {
-  transform: scale(1.05);
-}#services {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #0b0c1a;
-  color: #fff;
-}
-
-#services h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-#services h2 span {
-  color: #00bfff;
-}
-
-.services-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.service-card {
-  background-color: #1a1c2c;
-  border-radius: 12px;
-  padding: 30px;
-  width: 300px;
-  box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-}
-
-.service-card .icon {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  display: block;
-  color: #00bfff;
-}
-
-.service-card h2 {
-  font-size: 10rem;
-  margin-bottom: 15px;
-}
-
-.service-card p {
-  font-size: 10rem;
-  margin-bottom: 20px;
-  color: #ccc;
-}
-
-.service-card a {
-  background-color: #00bfff;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-}
 @media (max-width: 768px) {
   .services-container {
     flex-direction: column;
@@ -590,4 +507,3 @@ span {
     width: 90%;
   }
 }
-
