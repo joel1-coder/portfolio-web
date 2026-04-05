@@ -1,6 +1,6 @@
 /* ================================================================
    main.js — CODEJOE Portfolio
-   Joel A | Frontend Developer
+   Joel A | Full-Stack Developer
 ================================================================ */
 
 /* ────────────────────────────────────────────────────────────────
@@ -79,9 +79,9 @@ const servicesData = [
 ];
 
 const socialsData = [
-  { icon: '📧', label: 'Email me', sub: 'joelcoder7@gmail.com',                      href: 'mailto:joelcoder7@gmail.com' },
+  { icon: '📧', label: 'Email me', sub: 'joelcoder7@gmail.com',                      href: 'mailto:codejoe68333@gmail.com' },
   { icon: '🐙', label: 'GitHub',   sub: 'github.com/joel1-coder',                    href: 'https://github.com/joel1-coder' },
-  { icon: '💼', label: 'LinkedIn', sub: 'linkedin.com/in/a-joel-867001341',           href: 'https://www.linkedin.com/in/a-joel-867001341' },
+  { icon: '💼', label: 'LinkedIn', sub: 'linkedin.com/in/joel-a-web-developer',           href: 'https://www.linkedin.com/in/joel-a-web-developer/' },
   { icon: '🐦', label: 'Twitter', sub: 'x.com/CodeJoel21048', href: 'https://x.com/CodeJoel21048' },
 ];
 
@@ -363,7 +363,7 @@ function initAvatarUpload() {
 function initTyped() {
   if (typeof Typed === 'undefined') return;
   new Typed('.multiple-text', {
-    strings: ['Frontend Developer', 'UI/UX Designer', 'Web Creator'],
+    strings: ['Full-Stack Developer', 'UI/UX Designer', 'Web Creator'],
     typeSpeed:  70,
     backSpeed:  55,
     backDelay:  1200,

@@ -7,6 +7,9 @@
   <meta name="keywords" content="Joel, Full-Stack developer, web developer, portfolio, UI UX, React">
   <title>Joel A — Full-Stack Web Developer Portfolio</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="portfolio web/favicon.ico">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -83,9 +86,7 @@
             <div class="hero-avatar-ring-inner"></div>
           </div>
 
-          <div class="hero-avatar-circle" id="heroAvatarCircle"
-               onclick="document.getElementById('heroAvatarInput').click()"
-               title="Click to  your photo">
+          <div class="hero-avatar-circle" id="heroAvatarCircle">
             <!-- Shows real joe.jpg if present, otherwise placeholder -->
             <img id="heroAvatarImg" src="joe.jpg" alt="Joel A — profile photo"
                  onerror="this.style.display='none'; document.getElementById('avatarPlaceholder').style.display='flex';">
@@ -98,16 +99,6 @@
               <span>YOUR PHOTO</span>
             </div>
           </div>
-
-          <!--  icon button -->
-          <label class="hero--btn" for="heroAvatarInput" title=" photo">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-              <path d="M9 12V4M5 8l4-4 4 4" stroke="white" stroke-width="1.8"
-                    stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M3 14h12" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </label>
-          <input type="file" id="heroAvatarInput" accept="image/*">
         </div>
 
         <div class="hero-status">
@@ -126,7 +117,7 @@
           <a href="https://www.instagram.com/code_joe07" target="_blank" rel="noopener" aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="https://www.linkedin.com/in/a-joel-867001341" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/joel-a-web-developer/" target="_blank" rel="noopener" aria-label="LinkedIn">
             <i class="fa-brands fa-linkedin"></i>
           </a>
         </div>
