@@ -1,135 +1,362 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <!-- FONT-AWESOME -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <title>Responsive Personal Portfolio Website Design | @joel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Joel A — Full-Stack Web Developer & UI/UX Designer based in Trichy, India">
+  <meta name="keywords" content="Joel, Full-Stack developer, web developer, portfolio, UI UX, React">
+  <title>Joel A — Full-Stack Web Developer Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- HEADER DESIGN -->
-    <header class="header">
-        <a href="#home" class="logo">Portfolio</a>
 
+  <!-- ░░ NOISE TEXTURE OVERLAY ░░ -->
+  <div class="noise-overlay" aria-hidden="true"></div>
 
+  <!-- ░░ CUSTOM CURSOR ░░ -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
 
-        <i class="fa-solid fa-bars menu-icon"></i>
+  <!-- ════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <header id="navbar">
+    <a href="#home" class="nav-logo">CODEJOE</a>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-    <!-- HOME SECTION DESIGN -->
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hi,Myself</h3>
-            <h1>Joel</h1>
-            <h3>And I'm a Frontend Web Developer<span class="multiple-text"></span></h3>
-            <p>I've completed my higher secondary education in John Dewey Matriculation Higher Secondary School,Panruti and I'm currently pursuing my Bachelor's degree in Computer Science at St. Joseph's College of Arts and Science, Trichy. I have a passion for Web Development,design and I'm eager to apply my skills in real-world projects.</p>
-            <div class="social-media">
-                <a href="https://github.com/joel1-coder"><i class="fa-brands fa-github"></i></a>
-                <a href="https://x.com/CodeJoel21048"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.instagram.com/code_joe07?igsh=MWx0c2FzZzFkMTRhOA=="><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/a-joel-867001341"><i class="fa-brands fa-linkedin"></i></a>
+    <div class="nav-right">
+      <!-- Dark / Light toggle -->
+      <label class="theme-toggle" title="Toggle theme">
+        <input type="checkbox" id="themeToggle">
+        <div class="toggle-track">
+          <span class="toggle-icon">🌙</span>
+          <span class="toggle-icon">☀️</span>
+        </div>
+        <div class="toggle-thumb"></div>
+      </label>
+
+      <a href="./JOEL_A_Resume_.pdf" download class="resume-btn">↓ Resume</a>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════
+       HERO / HOME
+  ════════════════════════════════════════ -->
+  <section id="home">
+    <!-- Animated background -->
+    <div class="hero-bg" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="hero-grid"></div>
+    </div>
+
+    <!-- Two-column inner -->
+    <div class="hero-inner">
+
+      <!-- LEFT — Profile Photo er -->
+      <div class="hero-avatar-col">
+        <div class="hero-avatar-wrap">
+          <div class="hero-avatar-ring" aria-hidden="true">
+            <div class="hero-avatar-ring-inner"></div>
+          </div>
+
+          <div class="hero-avatar-circle" id="heroAvatarCircle"
+               onclick="document.getElementById('heroAvatarInput').click()"
+               title="Click to  your photo">
+            <!-- Shows real joe.jpg if present, otherwise placeholder -->
+            <img id="heroAvatarImg" src="joe.jpg" alt="Joel A — profile photo"
+                 onerror="this.style.display='none'; document.getElementById('avatarPlaceholder').style.display='flex';">
+            <div class="avatar-placeholder" id="avatarPlaceholder" style="display:none">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+                <circle cx="26" cy="18" r="10" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M6 46c0-11.046 8.954-20 20-20s20 8.954 20 20"
+                      stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+              <span>YOUR PHOTO</span>
             </div>
-            <a href="./portfolio web/JOEL_A_Resume_.pdf.pdf" download class="btn">Download CV</a>
+          </div>
+
+          <!--  icon button -->
+          <label class="hero--btn" for="heroAvatarInput" title=" photo">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+              <path d="M9 12V4M5 8l4-4 4 4" stroke="white" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 14h12" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </label>
+          <input type="file" id="heroAvatarInput" accept="image/*">
         </div>
 
-        <div class="home-img">
-            <img class="my-name" src="joe.jpg" alt="profile-picture">
+        <div class="hero-status">
+          <span class="status-dot"></span>
+          Available for work
         </div>
 
-    </section>
+        <!-- Social icons below avatar -->
+        <div class="hero-socials">
+          <a href="https://github.com/joel1-coder" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://x.com/CodeJoel21048" target="_blank" rel="noopener" aria-label="Twitter/X">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/code_joe07" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/a-joel-867001341" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
 
-    <!-- ABOUT SECTION DESION-->
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="joe.jpg" alt="joel-profiles">
+      <!-- RIGHT — Text Content -->
+      <div class="hero-content">
+        <div class="hero-eyebrow">Hi, I'm Myself</div>
+
+        <h1 class="hero-title">
+          <span class="line-1">Joel A.</span>
+          <span class="line-2 multiple-text"></span>
+        </h1>
+
+        <p class="hero-sub">
+          I've completed my higher secondary education at <strong>John Dewey Matriculation Higher Secondary School, Panruti</strong> and I'm currently pursuing my
+          <strong>Bachelor's degree in Computer Science</strong> at St. Joseph's College of Arts and Science, Trichy. I have a deep passion for Web Development and Design.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">
+            View Projects
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#contact" class="btn-secondary">Let's Talk</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating stats -->
+    <div class="hero-stats" aria-hidden="true">
+      <div class="stat-item">
+        <div class="stat-value">3+</div>
+        <div class="stat-label">Projects</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">CS</div>
+        <div class="stat-label">Degree</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">∞</div>
+        <div class="stat-label">Curiosity</div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <div class="scroll-label">Scroll</div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       ABOUT
+  ════════════════════════════════════════ -->
+  <section id="about">
+    <div class="about-grid">
+
+      <!-- Left — image -->
+      <div class="about-visual reveal">
+        <div class="about-deco"></div>
+        <div class="about-img-wrap">
+          <img src="joe.jpg" alt="Joel A"
+               onerror="this.parentElement.innerHTML='<div class=\'about-avatar-placeholder\'><svg viewBox=\'0 0 80 80\' fill=\'none\'><circle cx=\'40\' cy=\'28\' r=\'16\' stroke=\'currentColor\' stroke-width=\'2\'/><path d=\'M8 72c0-17.673 14.327-32 32-32s32 14.327 32 32\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\'/></svg><span>JOEL</span></div>'">
+        </div>
+        <div class="about-badge">
+          <div class="about-badge-num">CS</div>
+          <div class="about-badge-text">B.Sc. Student</div>
+        </div>
+      </div>
+
+      <!-- Right — text -->
+      <div class="about-text-content">
+        <div class="section-label reveal">About Me</div>
+        <h2 class="section-title reveal reveal-delay-1">ABOUT <span class="gradient-text">Me</span></h2>
+        <h3 class="about-role reveal reveal-delay-2">Full-Stack Developer</h3>
+
+        <p class="about-desc reveal reveal-delay-3">
+          I specialise in building <strong>visually appealing</strong> and <strong>user-friendly websites</strong> using modern web technologies. My focus is on creating seamless and responsive interfaces that deliver an exceptional user experience across all devices.
+        </p>
+        <p class="about-desc reveal reveal-delay-4">
+          I enjoy collaborating with designers and backend developers to bring creative ideas to life and solve real-world problems through code.
+        </p>
+
+        <div class="about-highlights reveal reveal-delay-5">
+          <div class="about-highlight">HTML / CSS / JS</div>
+          <div class="about-highlight">React.js</div>
+          <div class="about-highlight">UI/UX Design</div>
+          <div class="about-highlight">Responsive Design</div>
+          <div class="about-highlight">Git & GitHub</div>
+          <div class="about-highlight">Problem Solving</div>
         </div>
 
-        <div class="about-content">
-            <h2 class="heading">ABOUT<span>Me</span></h2>
-            <h3>Frontend Developer</h3>
-            <p>specialize in building visually appealing and user-friendly websites using modern web technologies. My focus is on creating seamless and responsive interfaces that deliver an exceptional user experience across all devices. I enjoy collaborating with designers and backend developers to bring creative ideas to life and solve real-world problems through code.</p>
-            <a href="#portfolio" class="btn">Read more</a>
-        </div>
-    </section>
-    <!--SERVICE SECTION DESIGN-->
-    <section class="services" id="services">
-        <h2 class="heading">My<span> Services</span></h2>
-        <div class="services-container">
-            <div class="service-card">
-                <i class="fa-solid fa-code icon"></i>
-                <h3>Web Development</h3>
-                <p>Building responsive and dynamic websites using modern tech like HTML, CSS, JS.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-palette icon"></i>
-                <h3>UI/UX Design</h3>
-                <p>Creating user-centered designs with a focus on accessibility and usability.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-            <!-- Add more service cards as needed -->
-        </div>
-    </section>
+        <a href="#projects" class="btn-primary reveal reveal-delay-5" style="margin-top:2rem;display:inline-flex;">
+          Read More
+        </a>
+      </div>
+    </div>
+  </section>
 
-     <!--CONTACT SECTION DESIGN-->
-     <section class="contact" id="contact">
-        <h2 class="heading">Contact<span>Me</span></h2>
-        <form id="contact-form" action="#" onsubmit="sendEmail(); return false;">
-            <div class="input-box">
-                <input type="text" name="from_name" placeholder="Full Name" required>
-                <input type="email" name="from_email" placeholder="Email Address" required>
-            </div>
-            <div class="input-box">
-                <input type="number" name="mobile" placeholder="Mobile Number">
-                <input type="text" name="subject" placeholder="Email Subject">
-            </div>
-            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
-     </section>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init("IVdcbIrBfShbFsjSn");
-  })();
+  <!-- ════════════════════════════════════════
+       SKILLS
+  ════════════════════════════════════════ -->
+  <section id="skills">
+    <div class="skills-header">
+      <div>
+        <div class="section-label reveal">Tech Stack</div>
+        <h2 class="section-title reveal reveal-delay-1">Skills &amp; Tools</h2>
+      </div>
+    </div>
 
-  function sendEmail() {
-    emailjs.sendForm('service_zrzl4xi', 'template_p4mst2v', '#contact-form')
-      .then(function() {
-        alert("Message sent successfully!");
-      }, function(error) {
-        alert("Failed to send: " + error);
-      });
-  }
-</script>
-     <!--FOOTER DESIGN-->
+    <div class="skills-category-row reveal reveal-delay-2">
+      <div class="category-label">Frontend</div>
+      <div class="skills-grid" id="frontendSkills"></div>
+    </div>
+    <div class="skills-category-row reveal reveal-delay-3">
+      <div class="category-label">Tools &amp; Platforms</div>
+      <div class="skills-grid" id="toolsSkills"></div>
+    </div>
+  </section>
 
-     <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; 2024 by @joel| All Rights Reserved.</p>
+  <!-- ════════════════════════════════════════
+       PROJECTS
+  ════════════════════════════════════════ -->
+  <section id="projects">
+    <div class="projects-header">
+      <div>
+        <div class="section-label reveal">Featured Work</div>
+        <h2 class="section-title reveal reveal-delay-1">Projects</h2>
+      </div>
+      <a href="https://github.com/joel1-coder" target="_blank" class="btn-secondary reveal reveal-delay-2">
+        View All on GitHub →
+      </a>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid"></div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       SERVICES
+  ════════════════════════════════════════ -->
+  <section id="services">
+    <div class="section-label reveal" style="justify-content:center">What I Do</div>
+    <h2 class="section-title reveal reveal-delay-1" style="text-align:center;margin-bottom:3.5rem">
+      My <span class="gradient-text">Services</span>
+    </h2>
+
+    <div class="services-grid" id="servicesGrid"></div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       CONTACT
+  ════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="contact-layout">
+
+      <!-- Left info -->
+      <div>
+        <div class="section-label reveal">Get In Touch</div>
+        <h2 class="contact-info-title reveal reveal-delay-1">
+          Contact <span>Me</span>
+        </h2>
+        <p class="contact-desc reveal reveal-delay-2">
+          Whether you have a project in mind, want to collaborate, or just want to say hello — my inbox is always open.
+        </p>
+        <div class="contact-socials reveal reveal-delay-3" id="contactSocials"></div>
+      </div>
+
+      <!-- Right form -->
+      <form class="contact-form reveal reveal-delay-2" id="contact-form" onsubmit="sendEmail(); return false;">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="from_name">Full Name</label>
+            <input class="form-input" type="text" id="from_name" name="from_name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="from_email">Email</label>
+            <input class="form-input" type="email" id="from_email" name="from_email" placeholder="your@email.com" required>
+          </div>
         </div>
-     </footer>
-     <footer class="footer-iconTop">
-        <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
-     </footer>
-     <!--SCROLL REVEAL JS-->
-     <script src="https://unpkg.com/scrollreveal">  </script>
-     <!--TYPED JS-->
-     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-     <!--MAIN JS-->
-    <script src="main.js"></script>
-    <script src="js/script.js"></script>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="mobile">Mobile</label>
+            <input class="form-input" type="tel" id="mobile" name="mobile" placeholder="+91 XXXXXXXXXX">
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input class="form-input" type="text" id="subject" name="subject" placeholder="Project Inquiry">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="submitBtn">
+          Send Message
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M2 8l12-6-6 12-2-4-4-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-logo">CODEJOE</div>
+    <div class="footer-copy">Copyright © 2024 by @joel | All Rights Reserved.</div>
+    <a href="#home" class="footer-back-top">
+      <i class="fa-solid fa-angle-up"></i>
+      Back to top
+    </a>
+  </footer>
+
+  <!-- ── EXTERNAL SCRIPTS ── -->
+  <!-- EmailJS -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <!-- Main JS -->
+  <script src="main.js"></script>
+
 </body>
 </html>
-
-
