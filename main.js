@@ -12,16 +12,12 @@ const skillsData = {
     { name: 'CSS3',       icon: '🎨' },
     { name: 'JavaScript', icon: '⚡'  },
     { name: 'React.js',   icon: '⚛️'  },
-    { name: 'Tailwind',   icon: '🎯'  },
-    { name: 'Responsive', icon: '📱'  },
   ],
   tools: [
     { name: 'Git',        icon: '🔀'  },
     { name: 'GitHub',     icon: '🐙'  },
     { name: 'VS Code',    icon: '💻' },
     { name: 'Figma',      icon: '🎭'},
-    { name: 'Linux',      icon: '🐧' },
-    { name: 'npm',        icon: '📦'},
   ],
 };
 
@@ -34,6 +30,7 @@ const projectsData = [
     gradient: 'linear-gradient(135deg, #0a1628 0%, #1a2a4a 100%)',
     live:  '',   // replace with actual live URL
     source: '',
+    hidden: true,
   },
   {
     name: 'JOBOOK',
@@ -43,6 +40,7 @@ const projectsData = [
     gradient: 'linear-gradient(135deg, #100820 0%, #1e103a 100%)',
     live:   '',
     source: '',
+    hidden: true,
   },
   {
     name: 'College Attendance',
@@ -118,6 +116,9 @@ function renderProjects() {
   if (!grid) return;
 
   projectsData.forEach((p, i) => {
+    // Skip hidden projects
+    if (p.hidden) return;
+
     const card = document.createElement('div');
     card.className = 'project-card reveal';
     card.style.transitionDelay = `${i * 0.12}s`;
