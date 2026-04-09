@@ -18,10 +18,12 @@ const skillsData = {
     { name: 'MongoDB',    icon: '🍃' },
   ],
   tools: [
-    { name: 'Git',        icon: '🔀'  },
-    { name: 'GitHub',     icon: '🐙'  },
-    { name: 'VS Code',    icon: '💻' },
-    { name: 'Figma',      icon: '🎭'},
+    { name: 'Git',          icon: '🔀'  },
+    { name: 'GitHub',       icon: '<i class="fa-brands fa-github"></i>'  },
+    { name: 'VS Code',      icon: '💻' },
+    { name: 'Figma',        icon: '🎭'},
+    { name: 'GitHub Pages', icon: '📄' },
+    { name: 'Netlify',      icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-.962 1.228-1.736 1.228H8.153c-.785 0-1.236-.525-1.236-1.236V6.846c0-.711.45-1.236 1.236-1.236h7.673c.774 0 1.556.511 1.736 1.228l.027.087zm-3.673 3.673c-.18.717-.962 1.228-1.736 1.228H4.48c-.785 0-1.236-.525-1.236-1.236v-1.236c0-.711.45-1.236 1.236-1.236h7.673c.774 0 1.556.511 1.736 1.228l.027.087z" fill="#00C46A"/></svg>' },
   ],
 };
 
@@ -84,7 +86,6 @@ const socialsData = [
   { icon: '📧', label: 'Email me', sub: 'joelcoder7@gmail.com',                      href: 'mailto:codejoe68333@gmail.com' },
   { icon: '🐙', label: 'GitHub',   sub: 'github.com/joel1-coder',                    href: 'https://github.com/joel1-coder' },
   { icon: '💼', label: 'LinkedIn', sub: 'linkedin.com/in/joel-a-web-developer',           href: 'https://www.linkedin.com/in/joel-a-web-developer/' },
-  { icon: '🐦', label: 'Twitter', sub: 'x.com/CodeJoel21048', href: 'https://x.com/CodeJoel21048' },
 ];
 
 /* ────────────────────────────────────────────────────────────────
