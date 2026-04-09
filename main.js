@@ -13,6 +13,10 @@ const skillsData = {
     { name: 'JavaScript', icon: '⚡'  },
     { name: 'React.js',   icon: '⚛️'  },
   ],
+  backend: [
+    { name: 'Node.js',    icon: '🟢' },
+    { name: 'MongoDB',    icon: '🍃' },
+  ],
   tools: [
     { name: 'Git',        icon: '🔀'  },
     { name: 'GitHub',     icon: '🐙'  },
@@ -89,6 +93,7 @@ const socialsData = [
 function renderSkills() {
   const map = {
     frontendSkills: skillsData.frontend,
+    backendSkills:  skillsData.backend,
     toolsSkills:    skillsData.tools,
   };
   for (const [id, list] of Object.entries(map)) {
