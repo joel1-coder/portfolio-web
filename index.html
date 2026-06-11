@@ -338,7 +338,20 @@
 
   <!-- ── EXTERNAL SCRIPTS ── -->
   <!-- EmailJS SDK v4 -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    // Load EmailJS v4 properly
+    if (typeof emailjs === 'undefined') {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js';
+      script.onload = function() {
+        if (typeof emailjs !== 'undefined' && emailjs.init) {
+          console.log('EmailJS v4 loaded successfully');
+        }
+      };
+      document.head.appendChild(script);
+    }
+  </script>
   <!-- ScrollReveal -->
   <script src="https://unpkg.com/scrollreveal"></script>
   <!-- Typed.js -->

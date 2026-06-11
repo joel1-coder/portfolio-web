@@ -391,10 +391,18 @@ function initEmailJS() {
 }
 
 // Called from the form's onsubmit
-function sendEmail() {
+function sendEmail(e) {
+  if (e) e.preventDefault();
   const btn  = document.getElementById('submitBtn');
   const form = document.getElementById('contact-form');
-  if (!form || typeof emailjs === 'undefined') return;
+  if (!form) {
+    alert('Form not found');
+    return;
+  }
+  if (typeof emailjs === 'undefined') {
+    alert('Email service not loaded. Please refresh the page.');
+    return;
+  }
 
   btn.disabled = true;
   btn.textContent = 'Sending…';

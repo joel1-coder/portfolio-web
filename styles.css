@@ -939,7 +939,7 @@ section {
   padding:15px 34px; border-radius:10px;
   font-family:'Figtree',sans-serif; font-weight:600; font-size:0.92rem;
   background: var(--gradient-accent); color:#fff; border:none;
-  cursor:none; position:relative; overflow:hidden; align-self:flex-start;
+  cursor:pointer; position:relative; overflow:hidden; align-self:flex-start;
   transition: transform 0.25s, box-shadow 0.25s;
   box-shadow: 0 4px 24px rgba(99,211,255,0.2);
 }
