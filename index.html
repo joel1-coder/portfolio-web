@@ -1,351 +1,230 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Joel A — Full-Stack Web Developer & UI/UX Designer based in Trichy, India">
-  <meta name="keywords" content="Joel, Full-Stack developer, web developer, portfolio, UI UX, React">
-  <title>Joel A — Full-Stack Web Developer Portfolio</title>
+<!--
+  ============================================================
+  STEP 1 — Add "Portfolio" link to your navbar (inside <nav class="navbar">)
+  Paste this after the "Services" link:
+  ============================================================
+-->
+<a href="#portfolio">Projects</a>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="portfolio web/favicon.ico">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!--
+  ============================================================
+  STEP 2 — Paste this entire section AFTER your </section> closing
+  tag of the services section, and BEFORE the contact section.
+  ============================================================
+-->
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<section class="portfolio" id="portfolio">
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-  <!-- ░░ NOISE TEXTURE OVERLAY ░░ -->
-  <div class="noise-overlay" aria-hidden="true"></div>
-
-  <!-- ░░ CUSTOM CURSOR ░░ -->
-  <div id="cursor-dot" aria-hidden="true"></div>
-  <div id="cursor-ring" aria-hidden="true"></div>
-
-  <!-- ════════════════════════════════════════
-       NAVBAR
-  ════════════════════════════════════════ -->
-  <header id="navbar">
-    <a href="#home" class="nav-logo">CODEJOE</a>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="nav-right">
-      <!-- Dark / Light toggle -->
-      <label class="theme-toggle" title="Toggle theme">
-        <input type="checkbox" id="themeToggle">
-        <div class="toggle-track">
-          <span class="toggle-icon">🌙</span>
-          <span class="toggle-icon">☀️</span>
-        </div>
-        <div class="toggle-thumb"></div>
-      </label>
-
-      <a href="./portfolio%20web/JOEL_A_Resume_.pdf" download class="resume-btn">↓ Resume</a>
-
-      <!-- Hamburger -->
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- ════════════════════════════════════════
-       HERO / HOME
-  ════════════════════════════════════════ -->
-  <section id="home">
-    <!-- Animated background -->
-    <div class="hero-bg" aria-hidden="true">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="orb orb-3"></div>
-      <div class="hero-grid"></div>
+    <div class="portfolio-header">
+        <div class="portfolio-tag">My Work</div>
+        <h2 class="heading">Featured <span>Projects</span></h2>
+        <p class="portfolio-sub">4 full-stack MERN applications — live, deployed, and production-ready.</p>
     </div>
 
-    <!-- Two-column inner -->
-    <div class="hero-inner">
-
-      <!-- LEFT — Profile Photo er -->
-      <div class="hero-avatar-col">
-        <div class="hero-avatar-wrap">
-          <div class="hero-avatar-ring" aria-hidden="true">
-            <div class="hero-avatar-ring-inner"></div>
-          </div>
-
-          <div class="hero-avatar-circle" id="heroAvatarCircle">
-            <!-- Shows real joe.jpg if present, otherwise placeholder -->
-            <img id="heroAvatarImg" src="joe.jpg" alt="Joel A — profile photo"
-                 onerror="this.style.display='none'; document.getElementById('avatarPlaceholder').style.display='flex';">
-            <div class="avatar-placeholder" id="avatarPlaceholder" style="display:none">
-              <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">
-                <circle cx="26" cy="18" r="10" stroke="currentColor" stroke-width="1.8"/>
-                <path d="M6 46c0-11.046 8.954-20 20-20s20 8.954 20 20"
-                      stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              </svg>
-              <span>YOUR PHOTO</span>
+    <!-- PROJECT 1 — Attendance Management System -->
+    <div class="project-card">
+        <div class="project-img-wrap">
+            <!--
+                REPLACE THIS COMMENT with your <img> tag when ready.
+                Example: <img src="images/attendance-dashboard.png" alt="Attendance Management System">
+                Best screenshot to use: The admin dashboard showing attendance table.
+            -->
+            <div class="project-img-placeholder">
+                <i class="fa-solid fa-image"></i>
+                <span>Drop dashboard screenshot here</span>
+                <code>src="images/attendance.png"</code>
             </div>
-          </div>
+            <div class="project-img-overlay">
+                <a href="https://college-attendence.vercel.app/login" target="_blank" class="overlay-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+            </div>
         </div>
 
-        <div class="hero-status">
-          <span class="status-dot"></span>
-          Available for work
+        <div class="project-info">
+            <div class="project-number">01</div>
+            <div class="project-top">
+                <div>
+                    <span class="project-category">MERN Stack · Full Stack</span>
+                    <h3 class="project-title">Attendance Management System</h3>
+                </div>
+                <a href="https://college-attendence.vercel.app/login" class="project-live-badge" target="_blank">
+                    <span class="live-dot"></span> Live
+                </a>
+            </div>
+            <p class="project-desc">
+                Replaced manual college CS lab registers with a full-stack MERN system. Features separate Admin and Staff portals with JWT-based role authentication, and monthly/yearly Excel export for institutional reporting.
+            </p>
+            <div class="project-highlights">
+                <div class="highlight-item"><i class="fa-solid fa-check"></i> JWT Role Auth (Admin + Staff)</div>
+                <div class="highlight-item"><i class="fa-solid fa-check"></i> 5-Collection MongoDB Schema</div>
+                <div class="highlight-item"><i class="fa-solid fa-check"></i> Excel Export (Monthly & Yearly)</div>
+                <div class="highlight-item"><i class="fa-solid fa-check"></i> Protected API Routes</div>
+            </div>
+            <div class="project-tech">
+                <span>React.js</span><span>Node.js</span><span>Express.js</span>
+                <span>MongoDB</span><span>JWT</span><span>Excel Export</span>
+            </div>
+            <div class="project-actions">
+                <a href="https://college-attendence.vercel.app/login" target="_blank" class="btn-demo">
+                    <i class="fa-solid fa-play"></i> Live Demo
+                </a>
+                <a href="https://github.com/joel1-coder" target="_blank" class="btn-code">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT 2 — BPC Canteen Management System -->
+    <div class="project-card project-card-reverse">
+        <div class="project-img-wrap">
+            <div class="project-img-placeholder">
+                <i class="fa-solid fa-image"></i>
+                <span>Drop dashboard screenshot here</span>
+                <code>src="images/canteen.png"</code>
+            </div>
+            <div class="project-img-overlay">
+                <a href="https://balaji-perfect-caters.vercel.app/login" target="_blank" class="overlay-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+            </div>
         </div>
 
-        <!-- Social icons below avatar -->
-        <div class="hero-socials">
-          <a href="https://github.com/joel1-coder" target="_blank" rel="noopener" aria-label="GitHub">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/joel-a-web-developer/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
+        <div class="project-info">
+            <div class="project-number">02</div>
+            <div class="project-top">
+                <div>
+                    <span class="project-category">MERN Stack · Full Stack</span>
+                    <h3 class="project-title">BPC — Canteen Management System</h3>
+                </div>
+                <a href="https://balaji-perfect-caters.vercel.app/login" class="project-live-badge" target="_blank">
+                    <span class="live-dot"></span> Live
+                </a>
+            </div>
+            <p class="project-desc">
+                Full-stack canteen platform with three role-based portals — Admin, Operator, and Public. Features a QuickBill touch interface for counter operators with real-time discounts, receipt generation, and automatic MongoDB failover ensuring zero downtime.
+            </p>
+            <div class="project-highlights">
+                <div class="highlight-item"><i class="fa-solid fa-check"></i> 3 Role-Based Portals</div>
+                <div class="highlight-item"><i class="fa-solid fa-check"></i> QuickBill Touch Interface</div>
+                <div class="highlight-item"><i class="fa-solid fa-check"></i> MongoDB Atlas Auto-Failover</div>
+                <div class="highlight-item"><i class="fa-solid fa-check"></i> RESTful Menu & Billing APIs</div>
+            </div>
+            <div class="project-tech">
+                <span>React.js</span><span>Node.js</span><span>Express.js</span>
+                <span>MongoDB</span><span>SheetJS</span><span>REST API</span>
+            </div>
+            <div class="project-actions">
+                <a href="https://balaji-perfect-caters.vercel.app/login" target="_blank" class="btn-demo">
+                    <i class="fa-solid fa-play"></i> Live Demo
+                </a>
+                <a href="https://github.com/joel1-coder" target="_blank" class="btn-code">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </div>
         </div>
-      </div>
-
-      <!-- RIGHT — Text Content -->
-      <div class="hero-content">
-        <div class="hero-eyebrow">Hi, I'm Myself</div>
-
-        <h1 class="hero-title">
-          <span class="line-1">Joel A.</span>
-          <span class="line-2 multiple-text"></span>
-        </h1>
-
-        <p class="hero-sub">
-          I've completed my higher secondary education at <strong>John Dewey Matriculation Higher Secondary School, Panruti</strong> and I'm currently pursuing my
-          <strong>Bachelor's degree in Computer Science</strong> at St. Joseph's College of Arts and Science, Trichy. I have a deep passion for Web Development and Design.
-        </p>
-
-        <div class="hero-cta">
-          <a href="#projects" class="btn-primary">
-            View Projects
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"
-                    stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-          <a href="#contact" class="btn-secondary">Let's Talk</a>
-        </div>
-      </div>
     </div>
 
-    <!-- Floating stats -->
-    <div class="hero-stats" aria-hidden="true">
-      <div class="stat-item">
-        <div class="stat-value">1</div>
-        <div class="stat-label">Projects</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-value">CS</div>
-        <div class="stat-label">Degree</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-value">∞</div>
-        <div class="stat-label">Curiosity</div>
-      </div>
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="hero-scroll" aria-hidden="true">
-      <div class="scroll-line"></div>
-      <div class="scroll-label">Scroll</div>
-    </div>
-  </section>
-
-  <!-- ════════════════════════════════════════
-       ABOUT
-  ════════════════════════════════════════ -->
-  <section id="about">
-    <div class="about-grid">
-
-      <!-- Left — image -->
-      <div class="about-visual reveal">
-        <div class="about-deco"></div>
-        <div class="about-img-wrap">
-          <img src="joe.jpg" alt="Joel A"
-               onerror="this.parentElement.innerHTML='<div class=\'about-avatar-placeholder\'><svg viewBox=\'0 0 80 80\' fill=\'none\'><circle cx=\'40\' cy=\'28\' r=\'16\' stroke=\'currentColor\' stroke-width=\'2\'/><path d=\'M8 72c0-17.673 14.327-32 32-32s32 14.327 32 32\' stroke=\'currentColor\' stroke-width=\'2\' stroke-linecap=\'round\'/></svg><span>JOEL</span></div>'">
-        </div>
-        <div class="about-badge">
-          <div class="about-badge-num">CS</div>
-          <div class="about-badge-text">B.Sc. Student</div>
-        </div>
-      </div>
-
-      <!-- Right — text -->
-      <div class="about-text-content">
-        <div class="section-label reveal">About Me</div>
-        <h2 class="section-title reveal reveal-delay-1">ABOUT <span class="gradient-text">Me</span></h2>
-        <h3 class="about-role reveal reveal-delay-2">Full-Stack Developer</h3>
-
-        <p class="about-desc reveal reveal-delay-3">
-          I specialise in building <strong>visually appealing</strong> and <strong>user-friendly websites</strong> using modern web technologies. My focus is on creating seamless and responsive interfaces that deliver an exceptional user experience across all devices.
-        </p>
-        <p class="about-desc reveal reveal-delay-4">
-          I enjoy collaborating with designers and backend developers to bring creative ideas to life and solve real-world problems through code.
-        </p>
-
-        <div class="about-highlights reveal reveal-delay-5">
-          <div class="about-highlight">HTML / CSS / JS</div>
-          <div class="about-highlight">React.js</div>
-          <div class="about-highlight">UI/UX Design</div>
-          <div class="about-highlight">Responsive Design</div>
-          <div class="about-highlight">Git & GitHub</div>
-          <div class="about-highlight">Problem Solving</div>
+    <!-- PROJECT 3 — Venue Booking System -->
+    <div class="project-card">
+        <div class="project-img-wrap">
+            <div class="project-img-placeholder">
+                <i class="fa-solid fa-image"></i>
+                <span>Drop dashboard screenshot here</span>
+                <code>src="images/venue.png"</code>
+            </div>
+            <div class="project-img-overlay">
+                <a href="https://jobook-seven.vercel.app/login" target="_blank" class="overlay-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+            </div>
         </div>
 
-        <a href="#projects" class="btn-primary reveal reveal-delay-5" style="margin-top:2rem;display:inline-flex;">
-          Read More
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════════════════════════════════
-       SKILLS
-  ════════════════════════════════════════ -->
-  <section id="skills">
-    <div class="skills-header">
-      <div>
-        <div class="section-label reveal">Tech Stack</div>
-        <h2 class="section-title reveal reveal-delay-1">Skills &amp; Tools</h2>
-      </div>
-    </div>
-
-    <div class="skills-category-row reveal reveal-delay-2">
-      <div class="category-label">Frontend</div>
-      <div class="skills-grid" id="frontendSkills"></div>
-    </div>
-    <div class="skills-category-row reveal reveal-delay-3">
-      <div class="category-label">Backend</div>
-      <div class="skills-grid" id="backendSkills"></div>
-    </div>
-    <div class="skills-category-row reveal reveal-delay-4">
-      <div class="category-label">Tools &amp; Platforms</div>
-      <div class="skills-grid" id="toolsSkills"></div>
-    </div>
-  </section>
-
-  <!-- ════════════════════════════════════════
-       PROJECTS
-  ════════════════════════════════════════ -->
-  <section id="projects">
-    <div class="projects-header">
-      <div>
-        <div class="section-label reveal">Featured Work</div>
-        <h2 class="section-title reveal reveal-delay-1">Projects</h2>
-      </div>
-      <a href="https://github.com/joel1-coder" target="_blank" class="btn-secondary reveal reveal-delay-2">
-        View All on GitHub →
-      </a>
-    </div>
-
-    <div class="projects-grid" id="projectsGrid"></div>
-  </section>
-
-  <!-- ════════════════════════════════════════
-       SERVICES
-  ════════════════════════════════════════ -->
-  <section id="services">
-    <div class="section-label reveal" style="justify-content:center">What I Do</div>
-    <h2 class="section-title reveal reveal-delay-1" style="text-align:center;margin-bottom:3.5rem">
-      My <span class="gradient-text">Services</span>
-    </h2>
-
-    <div class="services-grid" id="servicesGrid"></div>
-  </section>
-
-  <!-- ════════════════════════════════════════
-       CONTACT
-  ════════════════════════════════════════ -->
-  <section id="contact">
-    <div class="contact-layout">
-
-      <!-- Left info -->
-      <div>
-        <div class="section-label reveal">Get In Touch</div>
-        <h2 class="contact-info-title reveal reveal-delay-1">
-          Contact <span>Me</span>
-        </h2>
-        <p class="contact-desc reveal reveal-delay-2">
-          Whether you have a project in mind, want to collaborate, or just want to say hello — my inbox is always open.
-        </p>
-        <div class="contact-socials reveal reveal-delay-3" id="contactSocials"></div>
-      </div>
-
-      <!-- Right form -->
-      <form class="contact-form reveal reveal-delay-2" id="contact-form" onsubmit="sendEmail(); return false;">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="from_name">Full Name</label>
-            <input class="form-input" type="text" id="from_name" name="from_name" placeholder="Your Name" required>
-          </div>
-          <div class="form-group">
-            <label for="from_email">Email</label>
-            <input class="form-input" type="email" id="from_email" name="from_email" placeholder="your@email.com" required>
-          </div>
+        <div class="project-info">
+            <div class="project-number">03</div>
+            <div class="project-top">
+                <div>
+                    <span class="project-category">MERN Stack · Full Stack</span>
+                    <h3 class="project-title">Venue Booking System</h3>
+                </div>
+                <a href="https://jobook-seven.vercel.app/login" class="project-live-badge" target="_blank">
+                    <span class="live-dot"></span> Live
+                </a>
+            </div>
+            <p class="project-desc">
+                Institutional room booking system with admin approval workflow, real-time slot availability indicators, and an in-app notification system for booking status updates. Auto-generates unique booking IDs (BK-0200) on every insert.
+            </p>
+            <div class="project-highlights">
+                <div class="highlight-item"><i class="fa-solid fa-check"></i> Admin Approval Workflow</div>
+                <div class="highlight-item"><i class="fa-solid fa-check"></i> Real-Time Slot Availability</div>
+                <div class="highlight-item"><i class="fa-solid fa-check"></i> In-App Notification System</div>
+                <div class="highlight-item"><i class="fa-solid fa-check"></i> Auto Booking ID Generation</div>
+            </div>
+            <div class="project-tech">
+                <span>React.js</span><span>Node.js</span><span>Express.js</span>
+                <span>MongoDB</span><span>Mongoose</span><span>SheetJS</span>
+            </div>
+            <div class="project-actions">
+                <a href="https://jobook-seven.vercel.app/login" target="_blank" class="btn-demo">
+                    <i class="fa-solid fa-play"></i> Live Demo
+                </a>
+                <a href="https://github.com/joel1-coder" target="_blank" class="btn-code">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </div>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="mobile">Mobile</label>
-            <input class="form-input" type="tel" id="mobile" name="mobile" placeholder="+91 XXXXXXXXXX">
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input class="form-input" type="text" id="subject" name="subject" placeholder="Project Inquiry">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about your project..." required></textarea>
-        </div>
-        <button type="submit" class="form-submit" id="submitBtn">
-          Send Message
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path d="M2 8l12-6-6 12-2-4-4-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </form>
-
     </div>
-  </section>
 
-  <!-- ════════════════════════════════════════
-       FOOTER
-  ════════════════════════════════════════ -->
-  <footer>
-    <div class="footer-logo">CODEJOE</div>
-    <div class="footer-copy">Copyright © 2024 by @joel | All Rights Reserved.</div>
-    <a href="#home" class="footer-back-top">
-      <i class="fa-solid fa-angle-up"></i>
-      Back to top
-    </a>
-  </footer>
+    <!-- PROJECT 4 — Notivo Task & Workflow Management -->
+    <div class="project-card project-card-reverse">
+        <div class="project-img-wrap">
+            <div class="project-img-placeholder">
+                <i class="fa-solid fa-image"></i>
+                <span>Drop dashboard screenshot here</span>
+                <code>src="images/notivo.png"</code>
+            </div>
+            <div class="project-img-overlay">
+                <a href="https://notivoworksjc.vercel.app/login" target="_blank" class="overlay-btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+            </div>
+        </div>
 
-  <!-- ── EXTERNAL SCRIPTS ── -->
-  <!-- EmailJS -->
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <!-- ScrollReveal -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <!-- Typed.js -->
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <div class="project-info">
+            <div class="project-number">04</div>
+            <div class="project-top">
+                <div>
+                    <span class="project-category">MERN Stack · Internship Project</span>
+                    <h3 class="project-title">Notivo — Task & Workflow Management</h3>
+                </div>
+                <a href="https://notivoworksjc.vercel.app/login" class="project-live-badge" target="_blank">
+                    <span class="live-dot"></span> Live
+                </a>
+            </div>
+            <p class="project-desc">
+                Built at FrontierWox Tech as Team Lead & Developer. A full-stack MERN admin dashboard for task management, dynamic form building, and user submission tracking — migrated from mock data to live MongoDB with multi-format data export.
+            </p>
+            <div class="project-highlights">
+                <div class="highlight-item"><i class="fa-solid fa-check"></i> Dynamic Form Template Builder</div>
+                <div class="highlight-item"><i class="fa-solid fa-check"></i> JWT + Role-Based Access Control</div>
+                <div class="highlight-item"><i class="fa-solid fa-check"></i> Excel, CSV & JSON Export</div>
+                <div class="highlight-item"><i class="fa-solid fa-check"></i> Built at FrontierWox (Internship)</div>
+            </div>
+            <div class="project-tech">
+                <span>React.js</span><span>Node.js</span><span>Express.js</span>
+                <span>MongoDB</span><span>JWT</span><span>Axios</span>
+            </div>
+            <div class="project-actions">
+                <a href="https://notivoworksjc.vercel.app/login" target="_blank" class="btn-demo">
+                    <i class="fa-solid fa-play"></i> Live Demo
+                </a>
+                <a href="https://github.com/joel1-coder" target="_blank" class="btn-code">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </div>
 
-  <!-- Main JS -->
-  <script src="main.js"></script>
-
-</body>
-</html>
+</section>
