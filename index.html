@@ -1,230 +1,439 @@
-<!--
-  ============================================================
-  STEP 1 — Add "Portfolio" link to your navbar (inside <nav class="navbar">)
-  Paste this after the "Services" link:
-  ============================================================
--->
-<a href="#portfolio">Projects</a>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joel A — Full-Stack Developer</title>
+    <meta name="description" content="Joel A | Full-Stack MERN Developer | 4 Production-Ready Projects | Live Demos Available">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Typed.js for typewriter effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    
+    <!-- EmailJS for contact form -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+<!-- ═══════════════════════════════════════════════════════════════
+     CURSOR ELEMENTS
+═══════════════════════════════════════════════════════════════ -->
+<div id="cursor-dot" class="cursor-dot"></div>
+<div id="cursor-ring" class="cursor-ring"></div>
 
-<!--
-  ============================================================
-  STEP 2 — Paste this entire section AFTER your </section> closing
-  tag of the services section, and BEFORE the contact section.
-  ============================================================
--->
-
-<section class="portfolio" id="portfolio">
-
-    <div class="portfolio-header">
-        <div class="portfolio-tag">My Work</div>
-        <h2 class="heading">Featured <span>Projects</span></h2>
-        <p class="portfolio-sub">4 full-stack MERN applications — live, deployed, and production-ready.</p>
-    </div>
-
-    <!-- PROJECT 1 — Attendance Management System -->
-    <div class="project-card">
-        <div class="project-img-wrap">
-            <!--
-                REPLACE THIS COMMENT with your <img> tag when ready.
-                Example: <img src="images/attendance-dashboard.png" alt="Attendance Management System">
-                Best screenshot to use: The admin dashboard showing attendance table.
-            -->
-            <div class="project-img-placeholder">
-                <i class="fa-solid fa-image"></i>
-                <span>Drop dashboard screenshot here</span>
-                <code>src="images/attendance.png"</code>
-            </div>
-            <div class="project-img-overlay">
-                <a href="https://college-attendence.vercel.app/login" target="_blank" class="overlay-btn">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-                </a>
-            </div>
+<!-- ═══════════════════════════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="logo">Joel<span>.</span></div>
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Projects</a>
+            <a href="#contact">Contact</a>
         </div>
+        <div class="nav-right">
+            <label class="theme-toggle" id="themeToggle" title="Toggle theme">
+                <input type="checkbox" class="theme-checkbox">
+                <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </label>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</nav>
 
-        <div class="project-info">
-            <div class="project-number">01</div>
-            <div class="project-top">
-                <div>
-                    <span class="project-category">MERN Stack · Full Stack</span>
-                    <h3 class="project-title">Attendance Management System</h3>
+<!-- ═══════════════════════════════════════════════════════════════
+     HERO SECTION
+═══════════════════════════════════════════════════════════════ -->
+<section class="hero" id="home">
+    <div class="hero-container">
+        <div class="hero-avatar">
+            <div id="heroAvatarCircle" class="avatar-circle">
+                <img id="heroAvatarImg" src="" alt="Your avatar" style="display: none;">
+                <div id="avatarPlaceholder" class="avatar-placeholder">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
                 </div>
-                <a href="https://college-attendence.vercel.app/login" class="project-live-badge" target="_blank">
-                    <span class="live-dot"></span> Live
-                </a>
-            </div>
-            <p class="project-desc">
-                Replaced manual college CS lab registers with a full-stack MERN system. Features separate Admin and Staff portals with JWT-based role authentication, and monthly/yearly Excel export for institutional reporting.
-            </p>
-            <div class="project-highlights">
-                <div class="highlight-item"><i class="fa-solid fa-check"></i> JWT Role Auth (Admin + Staff)</div>
-                <div class="highlight-item"><i class="fa-solid fa-check"></i> 5-Collection MongoDB Schema</div>
-                <div class="highlight-item"><i class="fa-solid fa-check"></i> Excel Export (Monthly & Yearly)</div>
-                <div class="highlight-item"><i class="fa-solid fa-check"></i> Protected API Routes</div>
-            </div>
-            <div class="project-tech">
-                <span>React.js</span><span>Node.js</span><span>Express.js</span>
-                <span>MongoDB</span><span>JWT</span><span>Excel Export</span>
-            </div>
-            <div class="project-actions">
-                <a href="https://college-attendence.vercel.app/login" target="_blank" class="btn-demo">
-                    <i class="fa-solid fa-play"></i> Live Demo
-                </a>
-                <a href="https://github.com/joel1-coder" target="_blank" class="btn-code">
-                    <i class="fa-brands fa-github"></i> GitHub
-                </a>
+                <input type="file" id="heroAvatarInput" accept="image/*" style="display: none;">
             </div>
         </div>
-    </div>
-
-    <!-- PROJECT 2 — BPC Canteen Management System -->
-    <div class="project-card project-card-reverse">
-        <div class="project-img-wrap">
-            <div class="project-img-placeholder">
-                <i class="fa-solid fa-image"></i>
-                <span>Drop dashboard screenshot here</span>
-                <code>src="images/canteen.png"</code>
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm <span class="hero-name">Joel A</span></h1>
+            <p class="hero-subtitle">I'm a <span class="multiple-text">Full-Stack Developer</span></p>
+            <p class="hero-desc">Building production-ready full-stack MERN applications with focus on clean code, performance, and user experience. 4 live projects deployed and running.</p>
+            <div class="hero-actions">
+                <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
             </div>
-            <div class="project-img-overlay">
-                <a href="https://balaji-perfect-caters.vercel.app/login" target="_blank" class="overlay-btn">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-                </a>
-            </div>
-        </div>
-
-        <div class="project-info">
-            <div class="project-number">02</div>
-            <div class="project-top">
-                <div>
-                    <span class="project-category">MERN Stack · Full Stack</span>
-                    <h3 class="project-title">BPC — Canteen Management System</h3>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Live Projects</div>
                 </div>
-                <a href="https://balaji-perfect-caters.vercel.app/login" class="project-live-badge" target="_blank">
-                    <span class="live-dot"></span> Live
-                </a>
-            </div>
-            <p class="project-desc">
-                Full-stack canteen platform with three role-based portals — Admin, Operator, and Public. Features a QuickBill touch interface for counter operators with real-time discounts, receipt generation, and automatic MongoDB failover ensuring zero downtime.
-            </p>
-            <div class="project-highlights">
-                <div class="highlight-item"><i class="fa-solid fa-check"></i> 3 Role-Based Portals</div>
-                <div class="highlight-item"><i class="fa-solid fa-check"></i> QuickBill Touch Interface</div>
-                <div class="highlight-item"><i class="fa-solid fa-check"></i> MongoDB Atlas Auto-Failover</div>
-                <div class="highlight-item"><i class="fa-solid fa-check"></i> RESTful Menu & Billing APIs</div>
-            </div>
-            <div class="project-tech">
-                <span>React.js</span><span>Node.js</span><span>Express.js</span>
-                <span>MongoDB</span><span>SheetJS</span><span>REST API</span>
-            </div>
-            <div class="project-actions">
-                <a href="https://balaji-perfect-caters.vercel.app/login" target="_blank" class="btn-demo">
-                    <i class="fa-solid fa-play"></i> Live Demo
-                </a>
-                <a href="https://github.com/joel1-coder" target="_blank" class="btn-code">
-                    <i class="fa-brands fa-github"></i> GitHub
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- PROJECT 3 — Venue Booking System -->
-    <div class="project-card">
-        <div class="project-img-wrap">
-            <div class="project-img-placeholder">
-                <i class="fa-solid fa-image"></i>
-                <span>Drop dashboard screenshot here</span>
-                <code>src="images/venue.png"</code>
-            </div>
-            <div class="project-img-overlay">
-                <a href="https://jobook-seven.vercel.app/login" target="_blank" class="overlay-btn">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-                </a>
-            </div>
-        </div>
-
-        <div class="project-info">
-            <div class="project-number">03</div>
-            <div class="project-top">
-                <div>
-                    <span class="project-category">MERN Stack · Full Stack</span>
-                    <h3 class="project-title">Venue Booking System</h3>
+                <div class="stat">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Technologies</div>
                 </div>
-                <a href="https://jobook-seven.vercel.app/login" class="project-live-badge" target="_blank">
-                    <span class="live-dot"></span> Live
-                </a>
-            </div>
-            <p class="project-desc">
-                Institutional room booking system with admin approval workflow, real-time slot availability indicators, and an in-app notification system for booking status updates. Auto-generates unique booking IDs (BK-0200) on every insert.
-            </p>
-            <div class="project-highlights">
-                <div class="highlight-item"><i class="fa-solid fa-check"></i> Admin Approval Workflow</div>
-                <div class="highlight-item"><i class="fa-solid fa-check"></i> Real-Time Slot Availability</div>
-                <div class="highlight-item"><i class="fa-solid fa-check"></i> In-App Notification System</div>
-                <div class="highlight-item"><i class="fa-solid fa-check"></i> Auto Booking ID Generation</div>
-            </div>
-            <div class="project-tech">
-                <span>React.js</span><span>Node.js</span><span>Express.js</span>
-                <span>MongoDB</span><span>Mongoose</span><span>SheetJS</span>
-            </div>
-            <div class="project-actions">
-                <a href="https://jobook-seven.vercel.app/login" target="_blank" class="btn-demo">
-                    <i class="fa-solid fa-play"></i> Live Demo
-                </a>
-                <a href="https://github.com/joel1-coder" target="_blank" class="btn-code">
-                    <i class="fa-brands fa-github"></i> GitHub
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- PROJECT 4 — Notivo Task & Workflow Management -->
-    <div class="project-card project-card-reverse">
-        <div class="project-img-wrap">
-            <div class="project-img-placeholder">
-                <i class="fa-solid fa-image"></i>
-                <span>Drop dashboard screenshot here</span>
-                <code>src="images/notivo.png"</code>
-            </div>
-            <div class="project-img-overlay">
-                <a href="https://notivoworksjc.vercel.app/login" target="_blank" class="overlay-btn">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-                </a>
-            </div>
-        </div>
-
-        <div class="project-info">
-            <div class="project-number">04</div>
-            <div class="project-top">
-                <div>
-                    <span class="project-category">MERN Stack · Internship Project</span>
-                    <h3 class="project-title">Notivo — Task & Workflow Management</h3>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Dedication</div>
                 </div>
-                <a href="https://notivoworksjc.vercel.app/login" class="project-live-badge" target="_blank">
-                    <span class="live-dot"></span> Live
-                </a>
-            </div>
-            <p class="project-desc">
-                Built at FrontierWox Tech as Team Lead & Developer. A full-stack MERN admin dashboard for task management, dynamic form building, and user submission tracking — migrated from mock data to live MongoDB with multi-format data export.
-            </p>
-            <div class="project-highlights">
-                <div class="highlight-item"><i class="fa-solid fa-check"></i> Dynamic Form Template Builder</div>
-                <div class="highlight-item"><i class="fa-solid fa-check"></i> JWT + Role-Based Access Control</div>
-                <div class="highlight-item"><i class="fa-solid fa-check"></i> Excel, CSV & JSON Export</div>
-                <div class="highlight-item"><i class="fa-solid fa-check"></i> Built at FrontierWox (Internship)</div>
-            </div>
-            <div class="project-tech">
-                <span>React.js</span><span>Node.js</span><span>Express.js</span>
-                <span>MongoDB</span><span>JWT</span><span>Axios</span>
-            </div>
-            <div class="project-actions">
-                <a href="https://notivoworksjc.vercel.app/login" target="_blank" class="btn-demo">
-                    <i class="fa-solid fa-play"></i> Live Demo
-                </a>
-                <a href="https://github.com/joel1-coder" target="_blank" class="btn-code">
-                    <i class="fa-brands fa-github"></i> GitHub
-                </a>
             </div>
         </div>
     </div>
-
 </section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SKILLS SECTION
+═══════════════════════════════════════════════════════════════ -->
+<section class="skills" id="skills">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">Expertise</div>
+            <h2 class="heading">My <span>Skills</span></h2>
+        </div>
+        
+        <!-- Frontend -->
+        <div class="skills-group">
+            <h3 class="skills-title">Frontend</h3>
+            <div class="skills-grid" id="frontendSkills"></div>
+        </div>
+        
+        <!-- Backend -->
+        <div class="skills-group">
+            <h3 class="skills-title">Backend</h3>
+            <div class="skills-grid" id="backendSkills"></div>
+        </div>
+        
+        <!-- Tools & Platforms -->
+        <div class="skills-group">
+            <h3 class="skills-title">Tools & Platforms</h3>
+            <div class="skills-grid" id="toolsSkills"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SERVICES SECTION
+═══════════════════════════════════════════════════════════════ -->
+<section class="services" id="services">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">What I Do</div>
+            <h2 class="heading">My <span>Services</span></h2>
+        </div>
+        <div class="services-grid" id="servicesGrid"></div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PORTFOLIO SECTION
+═══════════════════════════════════════════════════════════════ -->
+<section class="portfolio" id="portfolio">
+    <div class="container">
+        <div class="portfolio-header">
+            <div class="portfolio-tag">My Work</div>
+            <h2 class="heading">Featured <span>Projects</span></h2>
+            <p class="portfolio-sub">4 full-stack MERN applications — live, deployed, and production-ready.</p>
+        </div>
+
+        <!-- PROJECT 1 — Attendance Management System -->
+        <div class="project-card">
+            <div class="project-img-wrap">
+                <div class="project-img-placeholder">
+                    <i class="fa-solid fa-image"></i>
+                    <span>Drop dashboard screenshot here</span>
+                    <code>src="images/attendance.png"</code>
+                </div>
+                <div class="project-img-overlay">
+                    <a href="https://college-attendence.vercel.app/login" target="_blank" class="overlay-btn">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-info">
+                <div class="project-number">01</div>
+                <div class="project-top">
+                    <div>
+                        <span class="project-category">MERN Stack · Full Stack</span>
+                        <h3 class="project-title">Attendance Management System</h3>
+                    </div>
+                    <a href="https://college-attendence.vercel.app/login" class="project-live-badge" target="_blank">
+                        <span class="live-dot"></span> Live
+                    </a>
+                </div>
+                <p class="project-desc">
+                    Replaced manual college CS lab registers with a full-stack MERN system. Features separate Admin and Staff portals with JWT-based role authentication, and monthly/yearly Excel export for institutional reporting.
+                </p>
+                <div class="project-highlights">
+                    <div class="highlight-item"><i class="fa-solid fa-check"></i> JWT Role Auth (Admin + Staff)</div>
+                    <div class="highlight-item"><i class="fa-solid fa-check"></i> 5-Collection MongoDB Schema</div>
+                    <div class="highlight-item"><i class="fa-solid fa-check"></i> Excel Export (Monthly & Yearly)</div>
+                    <div class="highlight-item"><i class="fa-solid fa-check"></i> Protected API Routes</div>
+                </div>
+                <div class="project-tech">
+                    <span>React.js</span><span>Node.js</span><span>Express.js</span>
+                    <span>MongoDB</span><span>JWT</span><span>Excel Export</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://college-attendence.vercel.app/login" target="_blank" class="btn-demo">
+                        <i class="fa-solid fa-play"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/joel1-coder" target="_blank" class="btn-code">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 2 — BPC Canteen Management System -->
+        <div class="project-card project-card-reverse">
+            <div class="project-img-wrap">
+                <div class="project-img-placeholder">
+                    <i class="fa-solid fa-image"></i>
+                    <span>Drop dashboard screenshot here</span>
+                    <code>src="images/canteen.png"</code>
+                </div>
+                <div class="project-img-overlay">
+                    <a href="https://balaji-perfect-caters.vercel.app/login" target="_blank" class="overlay-btn">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-info">
+                <div class="project-number">02</div>
+                <div class="project-top">
+                    <div>
+                        <span class="project-category">MERN Stack · Full Stack</span>
+                        <h3 class="project-title">BPC — Canteen Management System</h3>
+                    </div>
+                    <a href="https://balaji-perfect-caters.vercel.app/login" class="project-live-badge" target="_blank">
+                        <span class="live-dot"></span> Live
+                    </a>
+                </div>
+                <p class="project-desc">
+                    Full-stack canteen platform with three role-based portals — Admin, Operator, and Public. Features a QuickBill touch interface for counter operators with real-time discounts, receipt generation, and automatic MongoDB failover ensuring zero downtime.
+                </p>
+                <div class="project-highlights">
+                    <div class="highlight-item"><i class="fa-solid fa-check"></i> 3 Role-Based Portals</div>
+                    <div class="highlight-item"><i class="fa-solid fa-check"></i> QuickBill Touch Interface</div>
+                    <div class="highlight-item"><i class="fa-solid fa-check"></i> MongoDB Atlas Auto-Failover</div>
+                    <div class="highlight-item"><i class="fa-solid fa-check"></i> RESTful Menu & Billing APIs</div>
+                </div>
+                <div class="project-tech">
+                    <span>React.js</span><span>Node.js</span><span>Express.js</span>
+                    <span>MongoDB</span><span>SheetJS</span><span>REST API</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://balaji-perfect-caters.vercel.app/login" target="_blank" class="btn-demo">
+                        <i class="fa-solid fa-play"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/joel1-coder" target="_blank" class="btn-code">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 3 — Venue Booking System -->
+        <div class="project-card">
+            <div class="project-img-wrap">
+                <div class="project-img-placeholder">
+                    <i class="fa-solid fa-image"></i>
+                    <span>Drop dashboard screenshot here</span>
+                    <code>src="images/venue.png"</code>
+                </div>
+                <div class="project-img-overlay">
+                    <a href="https://jobook-seven.vercel.app/login" target="_blank" class="overlay-btn">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-info">
+                <div class="project-number">03</div>
+                <div class="project-top">
+                    <div>
+                        <span class="project-category">MERN Stack · Full Stack</span>
+                        <h3 class="project-title">Venue Booking System</h3>
+                    </div>
+                    <a href="https://jobook-seven.vercel.app/login" class="project-live-badge" target="_blank">
+                        <span class="live-dot"></span> Live
+                    </a>
+                </div>
+                <p class="project-desc">
+                    Institutional room booking system with admin approval workflow, real-time slot availability indicators, and an in-app notification system for booking status updates. Auto-generates unique booking IDs (BK-0200) on every insert.
+                </p>
+                <div class="project-highlights">
+                    <div class="highlight-item"><i class="fa-solid fa-check"></i> Admin Approval Workflow</div>
+                    <div class="highlight-item"><i class="fa-solid fa-check"></i> Real-Time Slot Availability</div>
+                    <div class="highlight-item"><i class="fa-solid fa-check"></i> In-App Notification System</div>
+                    <div class="highlight-item"><i class="fa-solid fa-check"></i> Auto Booking ID Generation</div>
+                </div>
+                <div class="project-tech">
+                    <span>React.js</span><span>Node.js</span><span>Express.js</span>
+                    <span>MongoDB</span><span>Mongoose</span><span>SheetJS</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://jobook-seven.vercel.app/login" target="_blank" class="btn-demo">
+                        <i class="fa-solid fa-play"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/joel1-coder" target="_blank" class="btn-code">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 4 — Notivo Task & Workflow Management -->
+        <div class="project-card project-card-reverse">
+            <div class="project-img-wrap">
+                <div class="project-img-placeholder">
+                    <i class="fa-solid fa-image"></i>
+                    <span>Drop dashboard screenshot here</span>
+                    <code>src="images/notivo.png"</code>
+                </div>
+                <div class="project-img-overlay">
+                    <a href="https://notivoworksjc.vercel.app/login" target="_blank" class="overlay-btn">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-info">
+                <div class="project-number">04</div>
+                <div class="project-top">
+                    <div>
+                        <span class="project-category">MERN Stack · Internship Project</span>
+                        <h3 class="project-title">Notivo — Task & Workflow Management</h3>
+                    </div>
+                    <a href="https://notivoworksjc.vercel.app/login" class="project-live-badge" target="_blank">
+                        <span class="live-dot"></span> Live
+                    </a>
+                </div>
+                <p class="project-desc">
+                    Built at FrontierWox Tech as Team Lead & Developer. A full-stack MERN admin dashboard for task management, dynamic form building, and user submission tracking — migrated from mock data to live MongoDB with multi-format data export.
+                </p>
+                <div class="project-highlights">
+                    <div class="highlight-item"><i class="fa-solid fa-check"></i> Dynamic Form Template Builder</div>
+                    <div class="highlight-item"><i class="fa-solid fa-check"></i> JWT + Role-Based Access Control</div>
+                    <div class="highlight-item"><i class="fa-solid fa-check"></i> Excel, CSV & JSON Export</div>
+                    <div class="highlight-item"><i class="fa-solid fa-check"></i> Built at FrontierWox (Internship)</div>
+                </div>
+                <div class="project-tech">
+                    <span>React.js</span><span>Node.js</span><span>Express.js</span>
+                    <span>MongoDB</span><span>JWT</span><span>Axios</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://notivoworksjc.vercel.app/login" target="_blank" class="btn-demo">
+                        <i class="fa-solid fa-play"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/joel1-coder" target="_blank" class="btn-code">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CONTACT SECTION
+═══════════════════════════════════════════════════════════════ -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">Get In Touch</div>
+            <h2 class="heading">Let's <span>Connect</span></h2>
+            <p class="section-desc">Have a project in mind? Let's talk about how I can help bring your ideas to life.</p>
+        </div>
+
+        <div class="contact-content">
+            <form class="contact-form" id="contact-form" onsubmit="sendEmail(); return false;">
+                <div class="form-group">
+                    <input type="text" name="user_name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="user_email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submitBtn">
+                    Send Message
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M2 8l12-6-6 12-2-4-4-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
+
+            <div class="contact-socials" id="contactSocials"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Joel<span>.</span></h3>
+                <p>Full-Stack Developer | MERN Specialist</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Joel A. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Your JavaScript -->
+<script src="main.js"></script>
+
+</body>
+</html>
