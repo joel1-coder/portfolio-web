@@ -385,7 +385,9 @@ function initTyped() {
 ──────────────────────────────────────────────────────────────── */
 function initEmailJS() {
   if (typeof emailjs === 'undefined') return;
-  emailjs.init('IVdcbIrBfShbFsjSn');
+  emailjs.init({
+    publicKey: 'IVdcbIrBfShbFsjSn',
+  });
 }
 
 // Called from the form's onsubmit
