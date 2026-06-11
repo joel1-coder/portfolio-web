@@ -381,13 +381,28 @@ function initTyped() {
 }
 
 /* ────────────────────────────────────────────────────────────────
-   EMAILJS — contact form
+   EMAILJS — contact form with v4 SDK
 ──────────────────────────────────────────────────────────────── */
 function initEmailJS() {
-  if (typeof emailjs === 'undefined') return;
-  emailjs.init({
-    publicKey: 'IVdcbIrBfShbFsjSn',
-  });
+  // Wait for EmailJS to be available
+  const checkEmailJS = setInterval(() => {
+    if (typeof window.EmailJS !== 'undefined') {
+      clearInterval(checkEmailJS);
+      window.EmailJS.init('IVdcbIrBfShbFsjSn');
+      console.log('✓ EmailJS initialized successfully');
+    }
+  }, 100);
+  
+  // Fallback - also try direct init after delay
+  setTimeout(() => {
+    if (typeof window.EmailJS !== 'undefined' && typeof window.EmailJS.init === 'function') {
+      try {
+        window.EmailJS.init('IVdcbIrBfShbFsjSn');
+      } catch(e) {
+        console.log('EmailJS already initialized');
+      }
+    }
+  }, 500);
 }
 
 // Called from the form's onsubmit
@@ -395,19 +410,22 @@ function sendEmail(e) {
   if (e) e.preventDefault();
   const btn  = document.getElementById('submitBtn');
   const form = document.getElementById('contact-form');
+  
   if (!form) {
     alert('Form not found');
     return;
   }
-  if (typeof emailjs === 'undefined') {
-    alert('Email service not loaded. Please refresh the page.');
+
+  if (typeof window.EmailJS === 'undefined' || typeof window.EmailJS.sendForm !== 'function') {
+    alert('Email service is loading... Please try again in a moment.');
     return;
   }
 
   btn.disabled = true;
   btn.textContent = 'Sending…';
 
-  emailjs.sendForm('service_jozmq0q', 'template_p4mst2v', form)
+  // Send via EmailJS v4
+  window.EmailJS.sendForm('service_jozmq0q', 'template_p4mst2v', form)
     .then(() => {
       btn.innerHTML = '✓ Message Sent!';
       btn.style.background = 'linear-gradient(135deg,#27ae60,#2ecc71)';
@@ -416,12 +434,13 @@ function sendEmail(e) {
         btn.disabled = false;
         btn.style.background = '';
         btn.innerHTML = 'Send Message <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8l12-6-6 12-2-4-4-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>';
-      }, 4000);
+      }, 3000);
     })
     .catch(err => {
       btn.disabled = false;
       btn.textContent = 'Send Message';
-      alert('Failed to send: ' + (err.text || err));
+      console.error('EmailJS Error:', err);
+      alert('Error: ' + (err.text || err.message || 'Failed to send message'));
     });
 }
 
