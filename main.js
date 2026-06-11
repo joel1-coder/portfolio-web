@@ -384,20 +384,20 @@ function initTyped() {
    EMAILJS — contact form with v4 SDK
 ──────────────────────────────────────────────────────────────── */
 function initEmailJS() {
-  // Wait for EmailJS to be available
+  // Wait for emailjs to be available
   const checkEmailJS = setInterval(() => {
-    if (typeof window.EmailJS !== 'undefined') {
+    if (typeof emailjs !== 'undefined') {
       clearInterval(checkEmailJS);
-      window.EmailJS.init('IVdcbIrBfShbFsjSn');
+      emailjs.init('IVdcbIrBfShbFsjSn');
       console.log('✓ EmailJS initialized successfully');
     }
   }, 100);
   
   // Fallback - also try direct init after delay
   setTimeout(() => {
-    if (typeof window.EmailJS !== 'undefined' && typeof window.EmailJS.init === 'function') {
+    if (typeof emailjs !== 'undefined' && typeof emailjs.init === 'function') {
       try {
-        window.EmailJS.init('IVdcbIrBfShbFsjSn');
+        emailjs.init('IVdcbIrBfShbFsjSn');
       } catch(e) {
         console.log('EmailJS already initialized');
       }
@@ -416,7 +416,7 @@ function sendEmail(e) {
     return;
   }
 
-  if (typeof window.EmailJS === 'undefined' || typeof window.EmailJS.sendForm !== 'function') {
+  if (typeof emailjs === 'undefined' || typeof emailjs.sendForm !== 'function') {
     alert('Email service is loading... Please try again in a moment.');
     return;
   }
@@ -425,7 +425,7 @@ function sendEmail(e) {
   btn.textContent = 'Sending…';
 
   // Send via EmailJS v4
-  window.EmailJS.sendForm('service_jozmq0q', 'template_p4mst2v', form)
+  emailjs.sendForm('service_jozmq0q', 'template_p4mst2v', form)
     .then(() => {
       btn.innerHTML = '✓ Message Sent!';
       btn.style.background = 'linear-gradient(135deg,#27ae60,#2ecc71)';
