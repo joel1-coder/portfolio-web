@@ -8,22 +8,22 @@
 ──────────────────────────────────────────────────────────────── */
 const skillsData = {
   frontend: [
-    { name: 'HTML5',      icon: '🌐'  },
-    { name: 'CSS3',       icon: '🎨' },
-    { name: 'JavaScript', icon: '⚡'  },
-    { name: 'React.js',   icon: '⚛️'  },
+    { name: 'HTML5', icon: '🌐' },
+    { name: 'CSS3', icon: '🎨' },
+    { name: 'JavaScript', icon: '⚡' },
+    { name: 'React.js', icon: '⚛️' },
   ],
   backend: [
-    { name: 'Node.js',    icon: '🟢' },
-    { name: 'MongoDB',    icon: '🍃' },
+    { name: 'Node.js', icon: '🟢' },
+    { name: 'MongoDB', icon: '🍃' },
   ],
   tools: [
-    { name: 'Git',          icon: '🔀'  },
-    { name: 'GitHub',       icon: '<i class="fa-brands fa-github"></i>'  },
-    { name: 'VS Code',      icon: '💻' },
-    { name: 'Figma',        icon: '🎭'},
+    { name: 'Git', icon: '🔀' },
+    { name: 'GitHub', icon: '<i class="fa-brands fa-github"></i>' },
+    { name: 'VS Code', icon: '💻' },
+    { name: 'Figma', icon: '🎭' },
     { name: 'GitHub Pages', icon: '📄' },
-    { name: 'Netlify',      icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-.962 1.228-1.736 1.228H8.153c-.785 0-1.236-.525-1.236-1.236V6.846c0-.711.45-1.236 1.236-1.236h7.673c.774 0 1.556.511 1.736 1.228l.027.087zm-3.673 3.673c-.18.717-.962 1.228-1.736 1.228H4.48c-.785 0-1.236-.525-1.236-1.236v-1.236c0-.711.45-1.236 1.236-1.236h7.673c.774 0 1.556.511 1.736 1.228l.027.087z" fill="#00C46A"/></svg>' },
+    { name: 'Netlify', icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18.717-.962 1.228-1.736 1.228H8.153c-.785 0-1.236-.525-1.236-1.236V6.846c0-.711.45-1.236 1.236-1.236h7.673c.774 0 1.556.511 1.736 1.228l.027.087zm-3.673 3.673c-.18.717-.962 1.228-1.736 1.228H4.48c-.785 0-1.236-.525-1.236-1.236v-1.236c0-.711.45-1.236 1.236-1.236h7.673c.774 0 1.556.511 1.736 1.228l.027.087z" fill="#00C46A"/></svg>' },
   ],
 };
 
@@ -34,7 +34,7 @@ const projectsData = [
     stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
     emoji: '🎓',
     gradient: 'linear-gradient(135deg, #0f1a10 0%, #1a2e1a 100%)',
-    live:   'https://college-attendence.vercel.app/login',
+    live: 'https://college-attendence.vercel.app/login',
     source: '',
   },
   {
@@ -43,7 +43,7 @@ const projectsData = [
     stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
     emoji: '🍽️',
     gradient: 'linear-gradient(135deg, #1a0e00 0%, #2e1a00 100%)',
-    live:   'https://balaji-perfect-caters.vercel.app/login',
+    live: 'https://balaji-perfect-caters.vercel.app/login',
     source: '',
   },
   {
@@ -52,7 +52,7 @@ const projectsData = [
     stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
     emoji: '🏛️',
     gradient: 'linear-gradient(135deg, #0a0e1a 0%, #111a30 100%)',
-    live:   'https://ebook-seven.vercel.app/login',
+    live: 'https://venue-booking-system-tau.vercel.app/',
     source: '',
   },
   {
@@ -61,7 +61,7 @@ const projectsData = [
     stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
     emoji: '📋',
     gradient: 'linear-gradient(135deg, #0a1628 0%, #1a2a4a 100%)',
-    live:   'https://notivoworcks.vercel.app/login',
+    live: 'https://notivoworksjc.vercel.app/',
     source: '',
   },
 ];
@@ -90,9 +90,9 @@ const servicesData = [
 ];
 
 const socialsData = [
-  { icon: '📧', label: 'Email me', sub: 'joelcoder7@gmail.com',                      href: 'mailto:codejoe68333@gmail.com' },
-  { icon: '🐙', label: 'GitHub',   sub: 'github.com/joel1-coder',                    href: 'https://github.com/joel1-coder' },
-  { icon: '💼', label: 'LinkedIn', sub: 'linkedin.com/in/joel-a-web-developer',           href: 'https://www.linkedin.com/in/joel-a-web-developer/' },
+  { icon: '📧', label: 'Email me', sub: 'joelcoder7@gmail.com', href: 'mailto:codejoe68333@gmail.com' },
+  { icon: '🐙', label: 'GitHub', sub: 'github.com/joel1-coder', href: 'https://github.com/joel1-coder' },
+  { icon: '💼', label: 'LinkedIn', sub: 'linkedin.com/in/joel-a-web-developer', href: 'https://www.linkedin.com/in/joel-a-web-developer/' },
 ];
 
 /* ────────────────────────────────────────────────────────────────
@@ -101,8 +101,8 @@ const socialsData = [
 function renderSkills() {
   const map = {
     frontendSkills: skillsData.frontend,
-    backendSkills:  skillsData.backend,
-    toolsSkills:    skillsData.tools,
+    backendSkills: skillsData.backend,
+    toolsSkills: skillsData.tools,
   };
   for (const [id, list] of Object.entries(map)) {
     const container = document.getElementById(id);
@@ -226,7 +226,7 @@ function initScrollObserver() {
    NAVBAR — sticky + active link + close mobile on scroll
 ──────────────────────────────────────────────────────────────── */
 function initNavbar() {
-  const navbar   = document.getElementById('navbar');
+  const navbar = document.getElementById('navbar');
   const navLinks = document.querySelectorAll('.nav-links a');
   const sections = document.querySelectorAll('section[id]');
 
@@ -255,8 +255,8 @@ function initNavbar() {
    HAMBURGER MENU
 ──────────────────────────────────────────────────────────────── */
 function initHamburger() {
-  const btn  = document.getElementById('hamburger');
-  const nav  = document.getElementById('navLinks');
+  const btn = document.getElementById('hamburger');
+  const nav = document.getElementById('navLinks');
   if (!btn || !nav) return;
 
   btn.addEventListener('click', () => {
@@ -278,7 +278,7 @@ function initHamburger() {
 ──────────────────────────────────────────────────────────────── */
 function initTheme() {
   const toggle = document.getElementById('themeToggle');
-  const html   = document.documentElement;
+  const html = document.documentElement;
   if (!toggle) return;
 
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -299,7 +299,7 @@ function initTheme() {
    CUSTOM CURSOR
 ──────────────────────────────────────────────────────────────── */
 function initCursor() {
-  const dot  = document.getElementById('cursor-dot');
+  const dot = document.getElementById('cursor-dot');
   const ring = document.getElementById('cursor-ring');
   if (!dot || !ring) return;
 
@@ -308,14 +308,14 @@ function initCursor() {
   document.addEventListener('mousemove', e => {
     mx = e.clientX; my = e.clientY;
     dot.style.left = mx + 'px';
-    dot.style.top  = my + 'px';
+    dot.style.top = my + 'px';
   }, { passive: true });
 
   (function animateRing() {
     rx += (mx - rx) * 0.14;
     ry += (my - ry) * 0.14;
     ring.style.left = rx + 'px';
-    ring.style.top  = ry + 'px';
+    ring.style.top = ry + 'px';
     requestAnimationFrame(animateRing);
   })();
 
@@ -332,10 +332,10 @@ function initCursor() {
 function initTilt() {
   document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mousemove', e => {
-      const r  = card.getBoundingClientRect();
-      const dx = (e.clientX - (r.left + r.width  / 2)) / r.width;
-      const dy = (e.clientY - (r.top  + r.height / 2)) / r.height;
-      card.style.transform = `translateY(-8px) rotateY(${dx*7}deg) rotateX(${-dy*7}deg) scale(1.01)`;
+      const r = card.getBoundingClientRect();
+      const dx = (e.clientX - (r.left + r.width / 2)) / r.width;
+      const dy = (e.clientY - (r.top + r.height / 2)) / r.height;
+      card.style.transform = `translateY(-8px) rotateY(${dx * 7}deg) rotateX(${-dy * 7}deg) scale(1.01)`;
     });
     card.addEventListener('mouseleave', () => { card.style.transform = ''; });
   });
@@ -345,8 +345,8 @@ function initTilt() {
    HERO AVATAR UPLOAD (click or drag-and-drop)
 ──────────────────────────────────────────────────────────────── */
 function initAvatarUpload() {
-  const input       = document.getElementById('heroAvatarInput');
-  const img         = document.getElementById('heroAvatarImg');
+  const input = document.getElementById('heroAvatarInput');
+  const img = document.getElementById('heroAvatarImg');
   const placeholder = document.getElementById('avatarPlaceholder');
   if (!input || !img) return;
 
@@ -365,9 +365,9 @@ function initAvatarUpload() {
 
   const circle = document.getElementById('heroAvatarCircle');
   if (circle) {
-    circle.addEventListener('dragover',  e => { e.preventDefault(); circle.style.borderColor = 'var(--accent-1)'; });
+    circle.addEventListener('dragover', e => { e.preventDefault(); circle.style.borderColor = 'var(--accent-1)'; });
     circle.addEventListener('dragleave', () => { circle.style.borderColor = ''; });
-    circle.addEventListener('drop',      e => { e.preventDefault(); circle.style.borderColor = ''; applyImage(e.dataTransfer.files[0]); });
+    circle.addEventListener('drop', e => { e.preventDefault(); circle.style.borderColor = ''; applyImage(e.dataTransfer.files[0]); });
   }
 }
 
@@ -378,10 +378,10 @@ function initTyped() {
   if (typeof Typed === 'undefined') return;
   new Typed('.multiple-text', {
     strings: ['Full-Stack Developer', 'UI/UX Designer', 'Web Creator'],
-    typeSpeed:  70,
-    backSpeed:  55,
-    backDelay:  1200,
-    loop:       true,
+    typeSpeed: 70,
+    backSpeed: 55,
+    backDelay: 1200,
+    loop: true,
     showCursor: true,
     cursorChar: '|',
   });
@@ -399,13 +399,13 @@ function initEmailJS() {
       console.log('✓ EmailJS initialized successfully');
     }
   }, 100);
-  
+
   // Fallback - also try direct init after delay
   setTimeout(() => {
     if (typeof emailjs !== 'undefined' && typeof emailjs.init === 'function') {
       try {
         emailjs.init('IVdcbIrBfShbFsjSn');
-      } catch(e) {
+      } catch (e) {
         console.log('EmailJS already initialized');
       }
     }
@@ -415,9 +415,9 @@ function initEmailJS() {
 // Called from the form's onsubmit
 function sendEmail(e) {
   if (e) e.preventDefault();
-  const btn  = document.getElementById('submitBtn');
+  const btn = document.getElementById('submitBtn');
   const form = document.getElementById('contact-form');
-  
+
   if (!form) {
     alert('Form not found');
     return;
